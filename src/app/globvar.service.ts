@@ -1,13 +1,9 @@
 import { Injectable } from "@angular/core";
+import { Datanote } from "./datanote";
 
 @Injectable()
-class cek {
-  public judul;
-  public isi;
-  public tanggal;
-}
 export class GlobvarService {
-  private isiNote: [cek];
+  private isiNote: [Datanote];
 
   //private isiNote = [{ judul: String, isi: String, tanggal: String }];
 
@@ -16,7 +12,7 @@ export class GlobvarService {
   public getAll() {
     return this.isiNote;
   }
-  public setIsiNote(cek) {
-    this.isiNote.push(cek);
+  public setIsiNote(all: Datanote) {
+    this.isiNote.push(all);
   }
 }
