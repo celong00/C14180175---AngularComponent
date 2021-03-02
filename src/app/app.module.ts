@@ -13,7 +13,7 @@ import { RouterModule, Routes } from "@angular/router";
 const ROUTES: Routes = [
   { path: "detail", component: DetailComponent },
   { path: "home", component: HomeComponent },
-  { path: "home/:nama", component: HomeComponent }
+  { path: "favorite", component: FavoriteComponent }
 ];
 
 @NgModule({

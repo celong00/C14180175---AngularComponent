@@ -1,8 +1,15 @@
 import { Injectable } from "@angular/core";
 
 @Injectable()
+class cek {
+  public judul;
+  public isi;
+  public tanggal;
+}
 export class GlobvarService {
-  private isiNote = [{ judul: String, isi: String, tanggal: String }];
+  private isiNote: [cek];
+
+  //private isiNote = [{ judul: String, isi: String, tanggal: String }];
 
   constructor() {}
 
