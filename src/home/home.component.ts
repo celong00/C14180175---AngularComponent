@@ -14,23 +14,20 @@ import { GlobvarService } from "../app/globvar.service";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-  constructor(
-    public all: Datanote,
-    private router: Router,
-    public globalVar: GlobvarService
-  ) {
+  constructor(private router: Router, public globalVar: GlobvarService) {
     this.semuanote = globalVar.getAll();
   }
+  satu: Datanote;
   semuanote: [Datanote];
   judul: String = "";
   isi: String = "";
   tanggal: Date;
   inputNote() {
     alert(this.judul);
-    this.all.judul = this.judul;
-    this.all.isi = this.isi;
-    this.all.tanggal = this.tanggal;
-    this.globalVar.setIsiNote(this.all);
+    this.satu.judul = this.judul;
+    this.satu.isi = this.isi;
+    this.satu.tanggal = this.tanggal;
+    this.globalVar.setIsiNote(this.satu);
     this.semuanote = this.globalVar.getAll();
   }
   showNote() {
