@@ -1,3 +1,6 @@
+<button routerLink="/home">Back To Home</button>
+<br>
+<br>
 <div *ngFor="let note of semuanote; let i = index">
-	{{i+1}}. {{note.judul}} &nbsp; <button (click)="detail(note.judul)" >Go to Detail</button>
+	{{i+1}}. {{note.judul}}
 </div>
