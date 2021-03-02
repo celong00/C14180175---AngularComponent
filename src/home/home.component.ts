@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
     this.satu.judul = this.judul;
     this.satu.isi = this.isi;
     this.satu.tanggal = this.tanggal;
-    this.globalVar.setIsiNote(this.satu);
+    this.globalVar.setIsiNote(this.judul, this.isi, this.tanggal);
     this.semuanote = this.globalVar.getAll();
   }
   showNote() {
