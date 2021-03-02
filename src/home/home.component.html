@@ -8,7 +8,8 @@ Judul = <input type="date" [(ngModel)]="tanggal">
 <br><br>
 <button (click)="inputNote()">Submit</button>
 <br><br>
-<button (click)="showNote()">See All notes</button>
-<br>
-<br>
-{{semuanote}}
+<button routerLink="/favorite">See All Favourite</button>
+<br><br>
+<div *ngFor="let note of semuanote; let i = index">
+	{{i+1}}. {{note.judul}} &nbsp; <button (click)="detail(note.judul)" >Go to Detail</button>
+</div>

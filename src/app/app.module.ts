@@ -12,6 +12,7 @@ import { RouterModule, Routes } from "@angular/router";
 
 const ROUTES: Routes = [
   { path: "detail", component: DetailComponent },
+  { path: "detail/:judul", component: DetailComponent },
   { path: "home", component: HomeComponent },
   { path: "favorite", component: FavoriteComponent }
 ];

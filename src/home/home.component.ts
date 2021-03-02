@@ -18,20 +18,23 @@ export class HomeComponent implements OnInit {
     this.semuanote = globalVar.getAll();
   }
   satu: Datanote;
-  semuanote: [Datanote];
+  semuanote: Array<Datanote>;
   judul: String = "";
   isi: String = "";
-  tanggal: Date;
+  tanggal: String = "";
   inputNote() {
     alert(this.judul);
-    this.satu.judul = this.judul;
-    this.satu.isi = this.isi;
-    this.satu.tanggal = this.tanggal;
+    // this.satu.judul = this.judul;
+    // this.satu.isi = this.isi;
+    // this.satu.tanggal = this.tanggal;
     this.globalVar.setIsiNote(this.judul, this.isi, this.tanggal);
     this.semuanote = this.globalVar.getAll();
   }
   showNote() {
     this.router.navigate(["/detail"]);
+  }
+  detail(a) {
+    this.router.navigate(["/detail/" + a]);
   }
   ngOnInit() {}
 }

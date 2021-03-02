@@ -1,0 +1,23 @@
+<button routerLink="/home">Back To Home</button>
+<br>
+<br>
+<p>Judul :
+	{{detilnote.judul}}</p>
+<p>isi :
+	{{detilnote.isi}}</p>
+<p>tanggal :
+	{{detilnote.tanggal}}</p>
+<p>favourite :
+	{{detilnote.favorite}}</p>
+<br>
+<br>
+
+<ng-template *ngIf="tampil; then templatetrue; else templatefalse"></ng-template>
+
+<ng-template #templatetrue>
+	<button (click)="favNote()">Set To Favourite</button>
+</ng-template>
+
+<ng-template #templatefalse>
+	<button (click)="unfavNote()">Set To UnFavourite</button>
+</ng-template>
