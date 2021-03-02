@@ -8,10 +8,11 @@ export class GlobvarService {
   ];
 
   //private isiNote = [{ judul: String, isi: String, tanggal: String }];
-  isiFav: Array<Datanote>  = [
+  isiFav: Array<Datanote> = [
     { judul: "dummy", isi: "a", tanggal: "aaa", favorite: true }
   ];
   isiAll: Datanote;
+
   constructor() {}
   public getSpecific(carijudul) {
     for (var i = 0; i < this.isiNote.length; i++) {
